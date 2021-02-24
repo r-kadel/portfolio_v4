@@ -1,9 +1,3 @@
-/*
-=============== 
-Fonts
-===============
-*/
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
 
 /*
 =============== 
@@ -748,10 +742,10 @@ Projects
 
 /*
 =============== 
-Blog
+Reviews
 ===============
 */
-.blog {
+.review {
   display: block;
   margin-bottom: 2rem;
   background: var(--clr-grey-10);
@@ -759,42 +753,42 @@ Blog
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
-.blog:hover {
+.review:hover {
   box-shadow: var(--dark-shadow);
   transform: scale(1.02);
 }
-.blog article {
+.review article {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
 }
-.blog-card {
+.review-card {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-.blog-img {
+.review-img {
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   height: 15rem;
 }
-.blog-card {
+.review-card {
   padding: 1.5rem 1rem;
 }
-.blog-card h4 {
+.review-card h4 {
   color: var(--clr-grey-1);
 }
 
-.blog-footer {
+.review-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.blog-footer p {
+.review-footer p {
   margin-bottom: 0;
   font-weight: bold;
   color: var(--clr-grey-5);
 }
-.blog-footer p:first-of-type {
+.review-footer p:first-of-type {
   display: inline-block;
   background: var(--clr-grey-9);
   color: var(--clr-grey-5);
@@ -806,17 +800,17 @@ Blog
   font-size: 0.85rem;
 }
 @media screen and (min-width: 576px) {
-  .blogs-center {
+  .reviews-center {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
     column-gap: 2rem;
   }
-  .blog-img {
+  .review-img {
     height: 17.5rem;
   }
 }
 @media screen and (min-width: 850px) {
-  .blog-img {
+  .review-img {
     height: 13.75rem;
   }
 }
@@ -856,9 +850,9 @@ Footer
 Pages
 ===============
 */
-.blog-template,
+.review-template,
 .projects-page,
-.blog-page,
+.review-page,
 .error-page,
 .about-page,
 .contact-page {
@@ -878,10 +872,10 @@ Pages
 }
 /*
 ===============
-Blog Page
+review Page
 ===============
 */
-.blog-page .blog {
+.review-page .review {
   background: var(--clr-white);
 }
 /*
@@ -997,22 +991,22 @@ Contact Page
 }
 /*
 ===============
-Blog Template
+review Template
 ===============
 */
-.blog-template {
+.review-template {
   padding: 5rem 0;
 }
 
-.blog-template h1,
-.blog-template h2 {
+.review-template h1,
+.review-template h2 {
   text-align: center;
 }
-.blog-template ul {
+.review-template ul {
   margin-top: 2rem;
   display: inline-block;
 }
-.blog-template ul li {
+.review-template ul li {
   background: var(--clr-grey-9);
   color: var(--clr-grey-5);
   padding: 0.5rem 1rem;
@@ -1020,7 +1014,7 @@ Blog Template
   text-transform: uppercase;
 }
 
-.blog-template blockquote {
+.review-template blockquote {
   background: var(--clr-primary-9);
   border-radius: var(--radius);
   padding: 1rem;
@@ -1028,14 +1022,14 @@ Blog Template
   color: var(--clr-primary-5);
   margin: 2rem 0;
 }
-.blog-template pre {
+.review-template pre {
   background: #222;
   color: yellow;
   overflow-x: scroll;
   padding: 1rem 1.5rem;
   border-radius: var(--radius);
 }
-.blog-template img {
+.review-template img {
   width: 15rem;
   height: 15rem;
   margin: 3rem 0;
