@@ -1,13 +1,8 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
 
 module.exports = {
   siteMetadata: {
     title: "Ryan Kadel's Portfolio",
-    description: "This is Ryan Kadel's Portfolio Site",
+    description: "This is Ryan Kadel's Portfolio Site built with Gatsby.js",
     author: "Ryan Kadel",
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
   },
@@ -26,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `https://portfolio-cms2021.herokuapp.com`,
         contentTypes: [`jobs`, `projects`, `reviews`],
         singleTypes: [`about`],
       },

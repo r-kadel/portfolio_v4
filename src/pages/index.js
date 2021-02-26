@@ -6,6 +6,7 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Reviews from "../components/Reviews"
+import SEO from "../components/SEO"
 export default ({ data }) => {
   const {
     allStrapiProjects: { nodes: projects },
@@ -14,6 +15,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Home" description="This is the home page of Ryan Kadel's Portfolio" />
       <Hero />
       <Services />
       <Jobs />
@@ -44,7 +46,7 @@ export const query = graphql`
         }
       }
     }
-    allStrapiReviews(sort: {fields: date, order: DESC}, limit: 3) {
+    allStrapiReviews(sort: { fields: date, order: DESC }, limit: 3) {
       nodes {
         slug
         date(formatString: "MMMM Do, YYYY")

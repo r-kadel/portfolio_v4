@@ -458,7 +458,11 @@ Hero
   .hero-img {
     display: block;
     grid-row: 1/1;
-    grid-column: 6/-1;
+    grid-column: 8/-1;
+    max-height: 375px;
+    width: 350px;
+    border-radius: 100%;
+
   }
 }
 @media screen and (min-width: 1170px) {
@@ -565,9 +569,7 @@ Jobs
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
 }
-.job-info {
-  /* min-height: 420px; */
-}
+
 .job-info h3 {
   font-weight: 400;
 }
@@ -668,7 +670,7 @@ Projects
   font-size: 1.5rem;
 }
 .project-desc {
-  word-spacing: 15px;
+  word-spacing: 5px;
   color: var(--clr-grey-3);
 }
 .project-stack {
@@ -889,6 +891,7 @@ About Page
 .about-img {
   margin-bottom: 2rem;
   height: 25rem;
+  border-radius: 100%;
 }
 .about-text .section-title {
   margin-bottom: 2rem;

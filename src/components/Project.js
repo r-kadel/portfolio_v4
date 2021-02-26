@@ -32,7 +32,6 @@ const Project = ({ description, name, github, stack, url, image, index }) => {
 
 Project.propTypes = {
   name:PropTypes.string.isRequired,
-  github:PropTypes.string.isRequired,
   description:PropTypes.string.isRequired,
   url:PropTypes.string.isRequired,
   image:PropTypes.object.isRequired,

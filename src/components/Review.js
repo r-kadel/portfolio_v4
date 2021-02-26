@@ -23,7 +23,6 @@ const Review = ({ id, image, date, summary, slug, reviewer }) => {
 
 Review.propTypes = {
   reviewer:PropTypes.string.isRequired,
-  github:PropTypes.string.isRequired,
   summary:PropTypes.string.isRequired,
   image:PropTypes.object.isRequired
 }
