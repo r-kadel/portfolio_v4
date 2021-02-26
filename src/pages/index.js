@@ -33,16 +33,16 @@ export const query = graphql`
         id
         url
         description
+        stack_item {
+          id
+          title
+        }
         image {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
             }
           }
-        }
-        stack {
-          id
-          name
         }
       }
     }

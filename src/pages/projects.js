@@ -34,9 +34,9 @@ export const query = graphql`
             }
           }
         }
-        stack {
+        stack_item {
           id
-          name
+          title
         }
       }
     }

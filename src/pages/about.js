@@ -40,7 +40,7 @@ export const query = graphql`
         title
         stack {
           id
-          name
+          title
         }
         image {
           childImageSharp {

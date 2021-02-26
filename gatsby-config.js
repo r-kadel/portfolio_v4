@@ -21,24 +21,24 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://portfolio-cms2021.herokuapp.com`,
+        apiURL: `http://localhost:1337`,
         contentTypes: [`jobs`, `projects`, `reviews`],
         singleTypes: [`about`],
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Open Sans`,
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Roboto`,
+    //         variants: [`400`, `700`],
+    //       },
+    //       {
+    //         family: `Open Sans`,
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 }
