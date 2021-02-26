@@ -33,7 +33,7 @@ export const query = graphql`
         id
         url
         description
-        stack_item {
+        stack {
           id
           title
         }

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
-const Project = ({ description, name, github, stack_item, url, image, index }) => {
+const Project = ({ description, name, github, stack, url, image, index }) => {
   return (
     <article className="project">
       {
@@ -13,7 +13,7 @@ const Project = ({ description, name, github, stack_item, url, image, index }) =
         <h3>{name}</h3>
         <p className="project-desc">{description}</p>
         <div className="project-stack">
-          {stack_item.map( (tech) => {
+          {stack.map( (tech) => {
             return <span key={tech.id}>{tech.name}</span>
           })}
         </div>
