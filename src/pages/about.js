@@ -22,7 +22,7 @@ const About = ({
             <p>{bio}</p>
             <div className="about-stack">
               {stack.map(item => {
-                return <span key={item.id}>{item.name}</span>
+                return <span key={item.id}>{item.title}</span>
               })}
             </div>
           </article>

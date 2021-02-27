@@ -53,7 +53,7 @@ const Jobs = () => {
           {desc.map( (desc) => {
             return <div className='job-desc' key={desc.id}>
               <FaAngleDoubleRight className='job-icon'/>
-              <p>{desc.desc}</p>
+              <p>{desc.name}</p>
             </div>
           })}
         </article>
