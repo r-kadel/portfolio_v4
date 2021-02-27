@@ -184,9 +184,9 @@ p {
 /* social links */
 .social-links {
   margin-top: 2rem;
-  width: 15rem;
+  width: 9rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .social-link {
   font-size: 1.75rem;
@@ -212,6 +212,9 @@ Navbar
   align-items: center;
   z-index: 200;
   background: var(--clr-white);
+}
+.logo { 
+  color: var(--clr-grey-1);
 }
 .nav-center {
   width: 90vw;
@@ -670,7 +673,7 @@ Projects
   font-size: 1.5rem;
 }
 .project-desc {
-  word-spacing: 5px;
+  word-spacing: 3px;
   color: var(--clr-grey-3);
 }
 .project-stack {
@@ -823,7 +826,7 @@ Footer
 ===============
 */
 .footer {
-  height: 9rem;
+  height: 5rem;
   background: #222;
   text-align: center;
   display: grid;
@@ -839,7 +842,7 @@ Footer
   color: var(--clr-primary-5);
 }
 .footer-links {
-  margin: 0 auto 1rem auto;
+  margin: 0 auto;
 }
 .footer .social-link {
   color: var(--clr-white);
