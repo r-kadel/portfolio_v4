@@ -7,23 +7,23 @@ Variables
 :root {
   /* dark shades of primary color*/
   /* --clr-primary-1: hsl(43, 86%, 17%); */
-  --clr-primary-1: hsl(252, 91%, 17%);
-  --clr-primary-2: hsl(253, 84%, 25%);
-  --clr-primary-3: hsl(253, 81%, 29%);
-  --clr-primary-4: hsl(252, 77%, 34%);
-  --clr-primary-5: #070478;
+  --clr-primary-1: hsl(244, 91%, 17%);
+  --clr-primary-2: hsl(245, 84%, 25%);
+  --clr-primary-3: hsl(214, 81%, 29%);
+  --clr-primary-4: hsl(243, 77%, 34%);
+  --clr-primary-5: hsl(251, 69%, 43%);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(253, 57%, 50%);
-  --clr-primary-7: hsl(252, 65%, 59%);
-  --clr-primary-8: hsl(252, 80%, 74%);
-  --clr-primary-9: hsl(253, 94%, 87%);
+  --clr-primary-6: hsl(204, 43%, 35%);
+  --clr-primary-7: hsl(243, 65%, 59%);
+  --clr-primary-8: hsl(243, 80%, 74%);
+  --clr-primary-9: hsl(240, 90%, 96%);
   --clr-primary-10: hsl(239, 92%, 90%);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-5: hsl(210, 22%, 30%);
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
@@ -210,7 +210,13 @@ Navbar
   background: var(--clr-white);
 }
 .logo {
-  color: var(--clr-grey-1);
+  color: var(--clr-primary-dark);
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+.logo svg {
+  margin-right: 8px;
 }
 .nav-center {
   width: 90vw;
@@ -337,7 +343,9 @@ Sidebar
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.close-btn:hover { color: var(--clr-red-light) }
+.close-btn:hover {
+  color: var(--clr-red-light);
+}
 @media screen and (min-width: 992px) {
   .sidebar {
     transform: translateX(-100%);
@@ -563,13 +571,19 @@ Jobs
   background: transparent;
   border-color: transparent;
   text-transform: capitalize;
-  font-size: 1.25rem;
-  letter-spacing: var(--spacing);
+  font-size: 1rem;
+  letter-spacing: 2px;
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
+}
+@media (min-width: 500px) {
+  .job-btn {
+    font-size: 1.25rem;
+    letter-spacing: var(--spacing);
+  }
 }
 .job-btn:hover {
   color: var(--clr-primary-5);
@@ -659,8 +673,10 @@ Projects
   transition: var(--transition);
   opacity: 0;
 }
-@media(min-width: 1080px) {
-  .project-img::after { opacity: 0.25; }
+@media (min-width: 1080px) {
+  .project-img::after {
+    opacity: 0.25;
+  }
 }
 .project:hover .project-img::after {
   opacity: 0;
@@ -700,6 +716,7 @@ Projects
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
+  font-weight: bold;
 }
 .about-stack span {
   margin-top: 0.5rem;
@@ -858,7 +875,7 @@ Footer
   color: var(--clr-white);
 }
 .footer .social-link:hover {
-  color: var(--clr-primary-5);
+  color: var(--clr-primary-8);
 }
 /*
 ===============

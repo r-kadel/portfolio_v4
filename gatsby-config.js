@@ -4,7 +4,7 @@ module.exports = {
     title: "Ryan Kadel's Portfolio",
     description: "This is Ryan Kadel's Portfolio Site built with Gatsby.js",
     author: "Ryan Kadel",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://ryan.kadel.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,
