@@ -6,8 +6,9 @@ const Navbar = ({toggleSidebar}) => {
   return <nav className="navbar">
     <div className="nav-center">
       <div className="nav-header">
-        <span className="logo">Logo Here?</span>
+        <span className="logo">Ryan Kadel WebDev</span>
         <button type="button" className="toggle-btn" onClick={toggleSidebar}>
+          <span className="sr-only">Toggle Navigation</span>
           <FaAlignRight />
         </button>
       </div>

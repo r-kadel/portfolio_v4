@@ -1,4 +1,3 @@
-
 /*
 =============== 
 Variables
@@ -8,17 +7,17 @@ Variables
 :root {
   /* dark shades of primary color*/
   /* --clr-primary-1: hsl(43, 86%, 17%); */
-  --clr-primary-1: hsl(184, 91%, 17%);
-  --clr-primary-2: hsl(185, 84%, 25%);
-  --clr-primary-3: hsl(185, 81%, 29%);
-  --clr-primary-4: hsl(184, 77%, 34%);
-  --clr-primary-5: #2caeba;
+  --clr-primary-1: hsl(252, 91%, 17%);
+  --clr-primary-2: hsl(253, 84%, 25%);
+  --clr-primary-3: hsl(253, 81%, 29%);
+  --clr-primary-4: hsl(252, 77%, 34%);
+  --clr-primary-5: #070478;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  --clr-primary-8: hsl(184, 80%, 74%);
-  --clr-primary-9: hsl(185, 94%, 87%);
-  --clr-primary-10: hsl(186, 100%, 94%);
+  --clr-primary-6: hsl(253, 57%, 50%);
+  --clr-primary-7: hsl(252, 65%, 59%);
+  --clr-primary-8: hsl(252, 80%, 74%);
+  --clr-primary-9: hsl(253, 94%, 87%);
+  --clr-primary-10: hsl(239, 92%, 90%);
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-3: hsl(209, 34%, 30%);
@@ -28,13 +27,13 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-green-dark: hsl(125, 67%, 35%);
+
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-white: #fff;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
+  --transition: all 0.3s ease;
   --spacing: 0.2rem;
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -152,7 +151,6 @@ p {
 .section {
   padding: 5rem 0;
 }
-
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -163,7 +161,6 @@ p {
     width: 95vw;
   }
 }
-/* added during recording */
 .underline {
   width: 5rem;
   height: 0.25rem;
@@ -179,7 +176,6 @@ p {
 .bg-grey {
   background: var(--clr-grey-10);
 }
-/* page links */
 
 /* social links */
 .social-links {
@@ -213,7 +209,7 @@ Navbar
   z-index: 200;
   background: var(--clr-white);
 }
-.logo { 
+.logo {
   color: var(--clr-grey-1);
 }
 .nav-center {
@@ -236,6 +232,16 @@ Navbar
   color: var(--clr-primary-5);
   cursor: pointer;
   transition: var(--transition);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 .toggle-btn:hover {
   color: var(--clr-primary-2);
@@ -328,7 +334,10 @@ Sidebar
   border-color: transparent;
   color: var(--clr-red-dark);
   cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
+.close-btn:hover { color: var(--clr-red-light) }
 @media screen and (min-width: 992px) {
   .sidebar {
     transform: translateX(-100%);
@@ -402,7 +411,6 @@ Sidebar Animation
 Hero
 ===============
 */
-/* underline added to globals */
 .hero {
   margin-top: -5rem;
   padding-top: 5rem;
@@ -465,7 +473,6 @@ Hero
     max-height: 375px;
     width: 350px;
     border-radius: 100%;
-
   }
 }
 @media screen and (min-width: 1170px) {
@@ -649,8 +656,11 @@ Projects
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
-  opacity: 0.85;
   transition: var(--transition);
+  opacity: 0;
+}
+@media(min-width: 1080px) {
+  .project-img::after { opacity: 0.25; }
 }
 .project:hover .project-img::after {
   opacity: 0;
@@ -722,7 +732,7 @@ Projects
     grid-column: 1 / span 8;
     /* grid-column-end: 8; */
     grid-row: 1 / 1;
-    height: 30rem;
+    height: 35rem;
     border-radius: var(--radius);
     box-shadow: var(--dark-shadow);
   }
@@ -862,7 +872,7 @@ Pages
 .about-page,
 .contact-page {
   background: var(--clr-grey-10);
-  min-height: calc(100vh - 5rem - 9rem);
+  min-height: calc(100vh - 9rem);
 }
 .error-page {
   display: grid;

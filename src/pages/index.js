@@ -5,12 +5,12 @@ import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
-import Reviews from "../components/Reviews"
+// import Reviews from "../components/Reviews"
 import SEO from "../components/SEO"
 export default ({ data }) => {
   const {
     allStrapiProjects: { nodes: projects },
-    allStrapiReviews: { nodes: reviews },
+    // allStrapiReviews: { nodes: reviews },
   } = data
 
   return (
@@ -20,7 +20,11 @@ export default ({ data }) => {
       <Services />
       <Jobs />
       <Projects projects={projects} title="featured projects" showLink />
-      <Reviews reviews={reviews} title="reviews" showLink />
+      {
+        // TBA WHEN I ACTUALLY GET REVIEWS
+        // Maybe change name to testimonials?
+      /* <Reviews reviews={reviews} title="reviews" showLink /> */
+      }
     </Layout>
   )
 }
