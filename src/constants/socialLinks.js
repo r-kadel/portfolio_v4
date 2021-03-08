@@ -13,7 +13,7 @@ const data = [
   {
     id: 3,
     icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
-    url: "https://www.https://github.com/r-kadel.com",
+    url: "https://github.com/r-kadel",
   },
 ]
 const links = data.map(link => {
